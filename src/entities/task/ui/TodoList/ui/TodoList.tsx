@@ -1,7 +1,7 @@
 import "./styles.css";
-import TaskItem from "../TaskItem/TaskItem";
+import { TaskItem } from "@entities/task/ui/TaskItem";
 
-function TodoList({ tasks, onDelete, isUrgently, onRedy, isRedy }) {
+export function TodoList({ tasks, onDelete, isUrgently, onRedy, isRedy }) {
   return (
     <>
       <div className="todo-main-div">
@@ -22,5 +22,3 @@ function TodoList({ tasks, onDelete, isUrgently, onRedy, isRedy }) {
     </>
   );
 }
-
-export default TodoList;

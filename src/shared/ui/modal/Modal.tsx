@@ -3,16 +3,21 @@ import "./styles.css";
 import DeleteIcon from "../icons/DeleteIcon";
 import type React from "react";
 
-
 type ModalProps = {
-  isOpen: boolean
-  onClose: () => void
-  children: React.ReactNode
-  icon: React.ReactNode
-  contentClassname?: string
-}
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+  icon: React.ReactNode;
+  contentClassname?: string;
+};
 
-function Modal({ isOpen, onClose, children, icon, contentClassname }: ModalProps) {
+function Modal({
+  isOpen,
+  onClose,
+  children,
+  icon,
+  contentClassname,
+}: ModalProps) {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(

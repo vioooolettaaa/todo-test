@@ -1,8 +1,8 @@
 import "./styles.css";
-import DeleteIcon from "../../../../shared/ui/icons/DeleteIcon";
-import TaskMarker from "../../../../shared/ui/icons/TaskMarker";
+import DeleteIcon from "../../../../../shared/ui/icons/DeleteIcon";
+import TaskMarker from "../../../../../shared/ui/icons/TaskMarker";
 
-function TaskItem({
+export function TaskItem({
   id,
   title,
   description,
@@ -40,5 +40,3 @@ function TaskItem({
     </>
   );
 }
-
-export default TaskItem;
