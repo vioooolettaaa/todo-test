@@ -20,10 +20,12 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
+    "allowJs": true,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "noImplicitAny": false,
 
     // Style Options
     // "noImplicitReturns": true,
@@ -45,5 +47,17 @@
     "esModuleInterop": true,
     "moduleResolution": "node10",
     "resolveJsonModule": true,
-  }
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@pages/*": ["pages/*"],
+      "@widgets/*": ["widgets/*"],
+      "@features/*": ["features/*"],
+      "@entities/*": ["entities/*"],
+      "@shared/*": ["shared/*"],
+      "@store/*": ["store/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "webpack.config.js"]
 }

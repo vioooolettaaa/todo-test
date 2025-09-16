@@ -1,0 +1,106 @@
+.main-nav-box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 235px;
+  min-width: 235px;
+  background-image: linear-gradient(rgb(145, 94, 94), rgb(37, 33, 33) 95%);
+  margin: 0;
+  gap: 10px;
+  height: 100vh;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+
+.main-nav-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-photo-container {
+  margin: 0 0 20px;
+  padding: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+.user-photo {
+  width: 210%;
+  height: 210%;
+  position: absolute;
+  top: -25%;
+  left: -35%;
+  object-fit: cover;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav-item-name {
+  margin-left: 10px;
+}
+
+button.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-items button::before {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  content: "";
+  display: block;
+  height: 0.5px;
+  background-color: rgb(210, 210, 210);
+  margin-top: 0;
+}
+
+.support-box {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.close-button-div {
+  position: absolute;
+  top: 20px;
+  left: 185px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.hidden-nav-box {
+  transform: translateX(-172px);
+}
+
+.main-nav-inner > *:not(.close-button-div) {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.hidden-nav-box .main-nav-inner > *:not(.close-button-div) {
+  opacity: 0;
+}

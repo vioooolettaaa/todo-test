@@ -1,0 +1,32 @@
+.urgently-checkbox + .urgently-span {
+  color: whitesmoke;
+}
+
+.urgently-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.urgently-span {
+  margin-left: 8;
+  font-size: 18px;
+  display: inline-flex;
+  width: 20;
+  height: 20;
+  border: "none";
+  border-radius: 4;
+  justify-content: center;
+  align-items: center;
+  font-size: 16;
+
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.urgently-checkbox:checked ~ .urgently-span {
+  color: rgb(145, 94, 94);
+}

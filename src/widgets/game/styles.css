@@ -1,0 +1,110 @@
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid whitesmoke;
+  padding: 10px;
+  margin: 5px;
+  width: 80px;
+  height: 80px;
+}
+
+.square svg path {
+  fill: whitesmoke;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square:hover {
+  background-color: rgba(99, 77, 87, 0.3);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.info-tatle-game {
+  display: flex;
+  font-size: 18px;
+}
+
+.game-field {
+  display: flex;
+  margin-right: auto;
+}
+
+.main-game-field {
+  display: flex;
+}
+
+.history-div {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-title {
+  margin-bottom: 20px;
+}
+
+.moves {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.moves-button {
+  font-size: 16px;
+  padding: 0;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  color: rgb(175, 171, 171);
+}
+
+.moves-button:not(:last-child)::after {
+  content: " ⟶";
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.moves-button:hover {
+  font-style: italic;
+  background-color: transparent;
+}
+
+.button-restart {
+  display: flex;
+  margin-top: auto;
+}
+
+.button-restart-text {
+  margin: 5px;
+}
+
+.restart-game {
+  display: flex;
+  align-items: center;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0.5px;
+  transition: border-color 0.5s ease;
+}
+
+.restart-game:hover {
+  border-color: rgb(145, 94, 94);
+  background-color: transparent;
+}
+
+.game-over {
+  background-color: rgb(37, 33, 33);
+}

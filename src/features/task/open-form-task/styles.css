@@ -1,0 +1,8 @@
+.add-button {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  border: none;
+  margin-bottom: 10px;
+}

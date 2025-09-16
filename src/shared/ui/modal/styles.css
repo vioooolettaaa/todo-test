@@ -1,0 +1,55 @@
+.quote-modal {
+  background: rgb(145, 94, 94);
+  color: whitesmoke;
+  font-family: Helvetica, sans-serif;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 600px;
+  min-width: 400px;
+  box-shadow: 0 20px 40px rgba(215, 133, 133, 0.3);
+}
+
+.quote-container {
+  margin: 20px;
+  align-content: center;
+}
+
+.quote-icon {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.quote-icon svg {
+  animation: bounce 10s infinite;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(60, 44, 44, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(150px);
+}
+
+.modal-close:hover {
+  background-color: transparent;
+}

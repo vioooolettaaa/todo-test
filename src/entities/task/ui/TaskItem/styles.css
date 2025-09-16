@@ -1,0 +1,52 @@
+.task-item {
+  display: flex;
+  flex-direction: row;
+
+  align-items: baseline;
+
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  transition: 0.5s;
+}
+
+.task-item:hover {
+  text-decoration: line-through;
+  color: rgb(135, 134, 134);
+}
+
+.description {
+  font-size: 14px;
+  color: rgb(135, 134, 134);
+  margin-top: 0;
+}
+
+.name-task {
+  margin-top: 0;
+}
+
+.task-description {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+.title {
+  display: flex;
+  gap: 10px;
+}
+
+.urgently {
+  color: rgb(145, 94, 94);
+}
+
+.through-lite {
+  color: rgb(135, 134, 134);
+  text-decoration: line-through;
+}
+
+.task-marker:hover {
+  background-color: transparent;
+}
+
+.task-marker:hover path {
+  fill: rgb(145, 94, 94);
+}

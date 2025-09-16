@@ -1,0 +1,28 @@
+.game-content-flex {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 100%;
+  padding: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+  transition: 0.3s ease-in-out;
+}
+
+.game-content-flex-padding {
+  padding-left: 260px;
+}
+
+.game-content-align {
+  width: 700px;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.game-title {
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+}

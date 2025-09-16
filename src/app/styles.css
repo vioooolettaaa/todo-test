@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+body,
+#root {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(37, 33, 33);
+  font-family: Helvetica, sans-serif;
+  color: whitesmoke;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 14px;
+  text-align: start;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: rgb(145, 94, 94);
+}
+
+.main-flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.main-content {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.main-content > * {
+  margin: 0px auto;
+}
