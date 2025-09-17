@@ -3,7 +3,7 @@ import "./styles.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AppLayout from "./layout/AppLayout";
-import TasksPage from "../pages/task-page/TasksPage";
+import { TasksPage } from "@pages/task-page/TasksPage";
 import GamePage from "../pages/game-page/ui/GamePage";
 
 export default function App() {
@@ -13,6 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/tasks" element={<TasksPage />} />
           <Route path="/game" element={<GamePage />} />
+          <Route path="/" element={<TasksPage />} />
 
           <Route
             path="*"

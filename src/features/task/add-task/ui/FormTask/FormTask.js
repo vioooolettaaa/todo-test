@@ -33,6 +33,7 @@ function FormTask({ onCreate, onCancel }) {
           placeholder="Название задачи"
         ></input>
         <textarea
+          required
           name="description"
           rows={3}
           className="textarea-form"

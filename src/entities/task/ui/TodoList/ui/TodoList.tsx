@@ -1,7 +1,22 @@
+import type { Task } from "@entities/task/model/taskStore";
 import "./styles.css";
 import { TaskItem } from "@entities/task/ui/TaskItem";
 
-export function TodoList({ tasks, onDelete, isUrgently, onRedy, isRedy }) {
+type TodoListProps = {
+  tasks: Task[];
+  onDelete: (taskId: string) => void;
+  isUrgently?: boolean;
+  onRedy?: (item: Task) => void;
+  isRedy?: boolean;
+};
+
+export function TodoList({
+  tasks,
+  onDelete,
+  isUrgently,
+  onRedy,
+  isRedy,
+}: TodoListProps) {
   return (
     <>
       <div className="todo-main-div">
@@ -13,7 +28,7 @@ export function TodoList({ tasks, onDelete, isUrgently, onRedy, isRedy }) {
               id={task._id}
               onDelete={onDelete}
               isUrgently={task.urgently}
-              onRedy={() => onRedy(task)}
+              onRedy={() => onRedy?.(task)}
               isRedy={isRedy}
             />
           ))}

@@ -1,14 +1,17 @@
-import TodoList from "../../entities/task/ui/TodoList/TodoList";
+import { TodoList } from "@entities/task/ui/TodoList";
 import OpenFormTask from "../../features/task/open-form-task/OpenFormTask";
 import FormTask from "../../features/task/add-task/ui/FormTask/FormTask";
 import useAppStore from "../../store/app-store";
-import useTaskStore from "../../entities/task/model/taskStore";
+import useTaskStore, { type Task } from "../../entities/task/model/taskStore";
 import TaskGreatingModal from "../../features/task/task-greating-modal/TaskGreatingModal";
 import FunIcon from "../../shared/ui/icons/FunIcon";
 import { useEffect, useState } from "react";
 import { fetchNotReadyTasks } from "../../entities/task/api/task-api";
+import { fetchReadyTasks } from "@entities/task/api/task-api";
+import { fetchDeleteTasks } from "../../entities/task/api/task-api";
+import { fetchAddTasks } from "../../entities/task/api/task-api";
 
-export default function TasksPage() {
+export function TasksPage() {
   const newTasks = useTaskStore((state) => state.tasks);
   const redyTasks = useTaskStore((state) => state.redyTasks);
   const showForm = useAppStore((state) => state.showForm);
@@ -26,44 +29,39 @@ export default function TasksPage() {
       onError: (err) => setError(err.message),
     });
 
-  const fetchReadyTasks = () =>
-    fetch("http://192.168.50.195:3000/task/ready")
-      .then((response) => response.json())
-      .then((data) => setReadyTasks(data))
-      .catch((err) => setError(err.message));
+  const getReadyTasks = () =>
+    fetchReadyTasks({
+      onSuccess: (data) => setReadyTasks(data),
+      onError: (err) => setError(err.message),
+    });
 
   useEffect(() => {
     //get запрос
     getNotReadyTasks();
-    fetchReadyTasks();
+    getReadyTasks();
   }, []);
 
-  const deleteTask = (taskId) => {
-    fetch("http://192.168.50.195:3000/task/delete", {
-      method: "DELETE",
-      body: JSON.stringify({ id: taskId }),
-      headers: {
-        "Content-Type": "application/json",
+  const deleteTask = (taskId: string) =>
+    fetchDeleteTasks({
+      taskId: taskId,
+      onSuccess: () => {
+        getNotReadyTasks();
+        getReadyTasks();
       },
-    }).then(() => {
-      fetchNotReadyTasks();
-      fetchReadyTasks();
+      onError: (err) => setError(err.message),
     });
-  };
 
-  const addItem = (item) => {
-    fetch("http://192.168.50.195:3000/task/add", {
-      method: "POST",
-      body: JSON.stringify(item),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }).then(fetchNotReadyTasks);
-    // addTasks(item);
+  const addItem = (item: string) => {
+    fetchAddTasks({
+      item: item,
+      onSuccess: () => getNotReadyTasks(),
+      onError: (err) => setError(err.message),
+    });
+
     closeForm();
   };
 
-  const toRedyTask = (item) => {
+  const toRedyTask = (item: Task) => {
     fetch("http://192.168.50.195:3000/task/add-to-ready", {
       method: "POST",
       body: JSON.stringify({ id: item._id }),
@@ -71,8 +69,8 @@ export default function TasksPage() {
         "Content-Type": "application/json",
       },
     }).then(() => {
-      fetchNotReadyTasks();
-      fetchReadyTasks();
+      getNotReadyTasks();
+      getReadyTasks();
     });
   };
 
