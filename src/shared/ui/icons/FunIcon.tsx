@@ -1,4 +1,9 @@
-function FunIcon({ height = "15", width = "15" }) {
+type FunIconProps = {
+  width?: string;
+  height?: string;
+};
+
+export default function FunIcon({ height = "15", width = "15" }: FunIconProps) {
   return (
     <>
       <svg
@@ -23,5 +28,3 @@ function FunIcon({ height = "15", width = "15" }) {
     </>
   );
 }
-
-export default FunIcon;

@@ -1,4 +1,4 @@
-function UrgentlyIcon() {
+export default function UrgentlyIcon() {
   return (
     <>
       <svg
@@ -23,5 +23,3 @@ function UrgentlyIcon() {
     </>
   );
 }
-
-export default UrgentlyIcon;

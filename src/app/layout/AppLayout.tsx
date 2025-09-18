@@ -1,6 +1,6 @@
 import "./styles.css";
 import MotivationModal from "../../widgets/motivation-modal/MotivationModal";
-import { Sidebar } from "./sidebar/ui/Sidebar";
+import { Sidebar } from "./sidebar/ui/sidebar/Sidebar";
 
 type AppLayoutProps = {
   children: React.ReactNode;

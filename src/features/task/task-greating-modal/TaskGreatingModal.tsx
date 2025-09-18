@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import Modal from "../../../shared/ui/modal/Modal";
-
-
+import Modal from "@shared/ui/modal/Modal";
 import ButterfluIcon from "@shared/ui/icons/ButterfluIcon";
 import useAppStore from "@store/app-store";
 

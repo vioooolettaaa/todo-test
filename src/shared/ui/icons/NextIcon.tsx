@@ -1,4 +1,4 @@
-function NextIcon() {
+export default function NextIcon() {
   return (
     <svg
       width="24"
@@ -18,5 +18,3 @@ function NextIcon() {
     </svg>
   );
 }
-
-export default NextIcon;

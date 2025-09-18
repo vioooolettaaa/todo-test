@@ -1,0 +1,21 @@
+.nav-item-name {
+  margin-left: 10px;
+}
+
+button.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-items button::before {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  content: "";
+  display: block;
+  height: 0.5px;
+  background-color: rgb(210, 210, 210);
+  margin-top: 0;
+}

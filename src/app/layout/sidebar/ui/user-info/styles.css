@@ -1,0 +1,26 @@
+.user-photo-container {
+  margin: 0 0 20px;
+  padding: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+.user-info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+/*
+.user-photo {
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  top: -25%;
+  left: -35%;
+  object-fit: cover; 
+}
+*/

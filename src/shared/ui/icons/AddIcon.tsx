@@ -1,4 +1,4 @@
-function AddIcon() {
+export default function AddIcon() {
   return (
     <svg
       width="20"
@@ -21,5 +21,3 @@ function AddIcon() {
     </svg>
   );
 }
-
-export default AddIcon;

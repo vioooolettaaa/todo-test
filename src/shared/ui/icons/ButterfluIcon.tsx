@@ -1,9 +1,9 @@
 type ButterfluIconProps = {
-  width: string
-   height: string 
-}
+  width: string;
+  height: string;
+};
 
-function ButterfluIcon({ width, height }: ButterfluIconProps) {
+export default function ButterfluIcon({ width, height }: ButterfluIconProps) {
   return (
     <svg
       width="24"
@@ -19,5 +19,3 @@ function ButterfluIcon({ width, height }: ButterfluIconProps) {
     </svg>
   );
 }
-
-export default ButterfluIcon;

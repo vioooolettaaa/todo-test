@@ -1,4 +1,4 @@
-function SearcIcon() {
+export default function SearcIcon() {
   return (
     <>
       <svg
@@ -23,5 +23,3 @@ function SearcIcon() {
     </>
   );
 }
-
-export default SearcIcon;

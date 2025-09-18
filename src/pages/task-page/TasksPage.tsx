@@ -1,15 +1,15 @@
 import { TodoList } from "@entities/task/ui/TodoList";
-import OpenFormTask from "../../features/task/open-form-task/OpenFormTask";
-import FormTask from "../../features/task/add-task/ui/FormTask/FormTask";
-import useAppStore from "../../store/app-store";
-import useTaskStore, { type Task } from "../../entities/task/model/taskStore";
-import TaskGreatingModal from "../../features/task/task-greating-modal/TaskGreatingModal";
-import FunIcon from "../../shared/ui/icons/FunIcon";
+import OpenFormTask from "@features/task/open-form-task/OpenFormTask";
+import FormTask from "@features/task/add-task/ui/FormTask/FormTask";
+import useAppStore from "@store/app-store";
+import useTaskStore, { type Task } from "@entities/task/model/taskStore";
+import TaskGreatingModal from "@features/task/task-greating-modal/TaskGreatingModal";
+import FunIcon from "@shared/ui/icons/FunIcon";
 import { useEffect, useState } from "react";
-import { fetchNotReadyTasks } from "../../entities/task/api/task-api";
+import { fetchNotReadyTasks } from "@entities/task/api/task-api";
 import { fetchReadyTasks } from "@entities/task/api/task-api";
-import { fetchDeleteTasks } from "../../entities/task/api/task-api";
-import { fetchAddTasks } from "../../entities/task/api/task-api";
+import { fetchDeleteTasks } from "@entities/task/api/task-api";
+import { fetchAddTasks } from "@entities/task/api/task-api";
 
 export function TasksPage() {
   const newTasks = useTaskStore((state) => state.tasks);
@@ -51,7 +51,7 @@ export function TasksPage() {
       onError: (err) => setError(err.message),
     });
 
-  const addItem = (item: string) => {
+  const addItem = (item: Record<string, any>) => {
     fetchAddTasks({
       item: item,
       onSuccess: () => getNotReadyTasks(),

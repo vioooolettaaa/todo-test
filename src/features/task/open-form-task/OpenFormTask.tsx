@@ -1,8 +1,12 @@
-import AddIcon from "../../../shared/ui/icons/AddIcon";
-import useAppStore from "../../../store/app-store";
+import AddIcon from "@shared/ui/icons/AddIcon";
+import useAppStore from "@store/app-store";
 import "./styles.css";
 
-function OpenFormTask({ onClick = null }) {
+type openFormTaskProps = {
+  onClick: () => void;
+};
+
+function OpenFormTask({ onClick }: openFormTaskProps) {
   const toogleForm = useAppStore((state) => state.toogleForm);
 
   const onClickHandle = () => {

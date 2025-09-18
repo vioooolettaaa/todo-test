@@ -11,7 +11,7 @@ type FetchDeleteProps = FetchProps & {
 };
 
 type FetchAddProps = FetchProps & {
-  item: string;
+  item: Record<string, any>;
 };
 
 export const fetchNotReadyTasks = ({ onSuccess, onError }: FetchProps) =>

@@ -1,25 +1,33 @@
 import "./styles.css";
 import UrgentlyInput from "../UrgentlyInput/UrgentlyInput";
+import React from "react";
 
-function FormTask({ onCreate, onCancel }) {
-  const onSubmit = (e) => {
+type formTaskProps = {
+  onCreate: (data: Record<string, any>) => void;
+  onCancel: () => void;
+};
+
+function FormTask({ onCreate, onCancel }: formTaskProps) {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const dataForm = {};
+    const dataForm: Record<string, any> = {};
 
-    const elements = e.target.elements;
-    Array.from(elements).forEach((item) => {
-      if (!!item.name) {
-        dataForm[item.name] = item.value;
-      }
-      if (item.type === "checkbox") {
-        dataForm[item.name] = item.checked;
+    const elements = Array.from(e.currentTarget.elements) as HTMLInputElement[];
+
+    elements.forEach((item) => {
+      if (item.name) {
+        if (item.type === "checkbox") {
+          dataForm[item.name] = item.checked;
+        } else {
+          dataForm[item.name] = item.value;
+        }
       }
     });
 
     dataForm.redy = false;
 
     onCreate(dataForm);
-    e.target.reset();
+    e.currentTarget.reset();
   };
 
   return (

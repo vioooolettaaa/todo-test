@@ -1,4 +1,4 @@
-function DeleteIcon() {
+export default function DeleteIcon() {
   return (
     <>
       <svg
@@ -16,5 +16,3 @@ function DeleteIcon() {
     </>
   );
 }
-
-export default DeleteIcon;

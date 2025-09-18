@@ -1,0 +1,10 @@
+.close-button-div {
+  position: absolute;
+  top: 20px;
+  left: 185px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}

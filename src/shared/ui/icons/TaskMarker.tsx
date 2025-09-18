@@ -1,4 +1,4 @@
-function TaskMarker() {
+export default function TaskMarker() {
   return (
     <>
       <svg
@@ -16,5 +16,3 @@ function TaskMarker() {
     </>
   );
 }
-
-export default TaskMarker;

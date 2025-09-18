@@ -1,4 +1,4 @@
-function FilterIcon() {
+export default function FilterIcon() {
   return (
     <>
       <svg
@@ -35,5 +35,3 @@ function FilterIcon() {
     </>
   );
 }
-
-export default FilterIcon;
