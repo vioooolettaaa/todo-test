@@ -1,0 +1,7 @@
+.main-game-field {
+  display: flex;
+}
+
+.game-over {
+  background-color: rgb(37, 33, 33);
+}

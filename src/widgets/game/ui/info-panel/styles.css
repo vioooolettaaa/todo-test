@@ -1,0 +1,11 @@
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.info-tatle-game {
+  display: flex;
+  font-size: 18px;
+}

@@ -1,5 +1,5 @@
-import useAppStore from "../../../store/app-store";
-import Game from "../../../widgets/game/Game";
+import useAppStore from "@store/app-store";
+import Game from "@widgets/game/ui/game/Game";
 
 import "./styles.css";
 

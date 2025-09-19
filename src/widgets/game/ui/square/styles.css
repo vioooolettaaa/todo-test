@@ -1,0 +1,18 @@
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid whitesmoke;
+  padding: 10px;
+  margin: 5px;
+  width: 80px;
+  height: 80px;
+}
+
+.square svg path {
+  fill: whitesmoke;
+}
+
+.square:hover {
+  background-color: rgba(99, 77, 87, 0.3);
+}
