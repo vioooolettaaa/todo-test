@@ -10,8 +10,11 @@ type HistoryProps = {
 export function History({ onClick, moves }: HistoryProps) {
   return (
     <div className="history-div">
-      <p className="history-title">История</p>
-      <div className="moves">{moves}</div>
+      <div className="history_title_moves">
+        <p className="history-title">История</p>
+
+        <div className="moves">{moves}</div>
+      </div>
       <div className="button-restart">
         <button className="restart-game" onClick={onClick}>
           <RestartIcon />

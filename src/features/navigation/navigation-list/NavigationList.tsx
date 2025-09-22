@@ -6,27 +6,37 @@ import FunIcon from "@shared/ui/icons/FunIcon";
 import ArchiveIcon from "@shared/ui/icons/ArchiveIcon";
 import GameIcon from "@shared/ui/icons/GameIcon";
 import UrgentlyIcon from "@shared/ui/icons/UrgentlyIcon";
+import useBreakpoints from "@shared/hooks/useBreakpoints";
 import { NavigationButton } from "./ui/NavigationButton";
 import "./styles.css";
 
 export function NavigationList() {
   const navigate = useNavigate();
   const openModal = useAppStore((state) => state.openModal);
+  const { isMobile } = useBreakpoints();
+  const closeSidebar = useAppStore((state) => state.closeSidebar);
+
+  const clickHandler = (url: string) => {
+    if (isMobile) {
+      closeSidebar();
+    }
+    navigate(url);
+  };
 
   return (
     <div className="nav-items">
       <NavigationButton
-        onClick={() => navigate("/tasks")}
+        onClick={() => clickHandler("/tasks")}
         icon={<UrgentlyIcon />}
         title="Задачи"
       />
       <NavigationButton
-        onClick={() => navigate("*")}
+        onClick={() => clickHandler("*")}
         icon={<SearcIcon />}
         title="Поиск"
       />
       <NavigationButton
-        onClick={() => navigate("*")}
+        onClick={() => clickHandler("*")}
         icon={<FilterIcon />}
         title="Фильтр"
       />
@@ -36,12 +46,12 @@ export function NavigationList() {
         title="Мотивация"
       />
       <NavigationButton
-        onClick={() => navigate("/game")}
+        onClick={() => clickHandler("/game")}
         icon={<GameIcon />}
         title="Игра"
       />
       <NavigationButton
-        onClick={() => navigate("*")}
+        onClick={() => clickHandler("*")}
         icon={<ArchiveIcon />}
         title="Архив"
       />

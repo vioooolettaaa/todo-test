@@ -9,13 +9,8 @@
   transition: 0.3s ease-in-out;
 }
 
-.game-content-flex-padding {
-  padding-left: 260px;
-}
-
 .game-content-align {
   width: 700px;
-  min-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,4 +20,28 @@
 .game-title {
   padding-bottom: 15px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .game-content-flex {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+  }
+
+  .game-content-align {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .game-title {
+    margin-top: 0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
 }

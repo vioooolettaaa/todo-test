@@ -10,6 +10,7 @@ import { fetchNotReadyTasks } from "@entities/task/api/task-api";
 import { fetchReadyTasks } from "@entities/task/api/task-api";
 import { fetchDeleteTasks } from "@entities/task/api/task-api";
 import { fetchAddTasks } from "@entities/task/api/task-api";
+import "./styles.css";
 
 export function TasksPage() {
   const newTasks = useTaskStore((state) => state.tasks);
@@ -88,11 +89,7 @@ export function TasksPage() {
 
   return (
     <>
-      <div
-        className={`main-content-flex ${
-          showSidebar && "main-content-flex-padding"
-        }`}
-      >
+      <div className="main-content-flex">
         <div className="main-header">
           <button className="modal-motovation-button" onClick={toogleModal}>
             <FunIcon />

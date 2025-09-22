@@ -16,3 +16,10 @@
 .square:hover {
   background-color: rgba(99, 77, 87, 0.3);
 }
+
+@media (max-width: 767px) {
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+}

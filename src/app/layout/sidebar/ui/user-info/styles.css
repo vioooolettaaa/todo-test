@@ -14,13 +14,8 @@
   align-items: center;
 }
 
-/*
-.user-photo {
-  width: 120%;
-  height: 120%;
-  position: absolute;
-  top: -25%;
-  left: -35%;
-  object-fit: cover; 
+@media (max-width: 767px) {
+  .user-name {
+    font-size: 20px;
+  }
 }
-*/

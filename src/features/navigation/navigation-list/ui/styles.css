@@ -19,3 +19,10 @@ button.nav-item {
   background-color: rgb(210, 210, 210);
   margin-top: 0;
 }
+
+@media (max-width: 767px) {
+  .nav-item-name {
+    margin-left: 10px;
+    font-size: 24px;
+  }
+}

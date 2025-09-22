@@ -1,4 +1,35 @@
-/* TasksPage specific styles */
+.main-content-flex {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 100%;
+  padding: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+  transition: 0.3s ease-in-out;
+}
+
+.main-content-flex::-webkit-scrollbar {
+  width: 5px;
+}
+
+.main-content-flex::-webkit-scrollbar-thumb {
+  height: 15px;
+}
+
+.main-content-flex::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content-flex::-webkit-scrollbar-thumb {
+  background: rgb(135, 134, 134);
+  border-radius: 8px;
+}
+
+.main-content-flex::-webkit-scrollbar-thumb:hover {
+  background: rgb(145, 94, 94);
+}
+
 .main-content-align {
   max-width: 700px;
   min-width: 400px;
@@ -39,4 +70,24 @@
 
 .close-show {
   height: 0px;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  padding-right: 3%;
+}
+
+.modal-motovation-button:hover path {
+  fill: rgb(145, 94, 94);
+}
+
+.modal-motovation-button:hover {
+  background-color: transparent;
+  transform: scale(1.5);
+}
+
+.modal-motovation-button {
+  transition: transform 0.3s ease-out;
 }

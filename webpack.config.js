@@ -31,8 +31,27 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.module\.css$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              esModule: true,
+              modules: true,
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        exclude: /\.module\.css$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+          },
+        ],
       },
     ],
   },

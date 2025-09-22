@@ -1,99 +1,10 @@
-.main-content-flex {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  width: 100%;
-  padding: 10px;
-  margin-right: 0px;
-  margin-left: 0px;
-  transition: 0.3s ease-in-out;
-}
-
-.main-content-flex::-webkit-scrollbar {
-  width: 5px;
-}
-
-.main-content-flex::-webkit-scrollbar-thumb {
-  height: 15px;
-}
-
-.main-content-flex::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.main-content-flex::-webkit-scrollbar-thumb {
-  background: rgb(135, 134, 134);
-  border-radius: 8px;
-}
-
-.main-content-flex::-webkit-scrollbar-thumb:hover {
-  background: rgb(145, 94, 94);
-}
-
-.main-content-flex-padding {
+.padding_left {
   padding-left: 260px;
 }
 
-/* MainHeader styles */
-.main-header {
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  padding-right: 3%;
-}
-
-.modal-motovation-button:hover path {
-  fill: rgb(145, 94, 94);
-}
-
-.modal-motovation-button:hover {
-  background-color: transparent;
-  transform: scale(1.5);
-}
-
-.modal-motovation-button {
-  transition: transform 0.3s ease-out;
-}
-
-/* TasksPage content styles */
-.main-content-align {
-  max-width: 700px;
-  min-width: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.main-title {
-  padding-bottom: 15px;
-  margin-bottom: 40px;
-}
-
-.count-tasks {
-  font-size: 16px;
-  color: rgb(135, 134, 134);
-  font-style: italic;
-  font-weight: 100;
-  letter-spacing: 2px;
-}
-
-.main-title-redy {
-  color: rgb(135, 134, 134);
-  border-top: 0.5px solid rgb(135, 134, 134);
-  padding-top: 10px;
-  margin-top: 100px;
-}
-
-.form-wrapper {
-  overflow: hidden;
-  transition: height 0.5s ease-in-out;
-}
-
-.open-show {
-  height: 200px;
-}
-
-.close-show {
-  height: 0px;
+@media (max-width: 767px) {
+  .main-content {
+    margin: 30px auto;
+    padding: 30px;
+  }
 }
