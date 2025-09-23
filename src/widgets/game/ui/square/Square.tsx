@@ -1,8 +1,8 @@
-import DeleteIcon from "@shared/ui/icons/DeleteIcon";
-import BeatleIcon from "@shared/ui/icons/BeatleIcon";
-import "./styles.css";
+import DeleteIcon from '@shared/ui/icons/DeleteIcon';
+import BeatleIcon from '@shared/ui/icons/BeatleIcon';
+import './styles.css';
 
-export type Squares = "X" | "Жук" | null;
+export type Squares = 'X' | 'Жук' | null;
 
 type SquareProps = {
   value: Squares;
@@ -12,7 +12,7 @@ type SquareProps = {
 export function Square({ value, onSquareClick }: SquareProps) {
   return (
     <button className="square" onClick={onSquareClick}>
-      {!!value ? value === "X" ? <DeleteIcon /> : <BeatleIcon /> : null}
+      {!!value ? value === 'X' ? <DeleteIcon /> : <BeatleIcon /> : null}
     </button>
   );
 }

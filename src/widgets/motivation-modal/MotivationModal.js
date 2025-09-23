@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import FunIcon from "../../shared/ui/icons/FunIcon";
-import NextIcon from "../../shared/ui/icons/NextIcon";
-import { dataMotivation } from "./data-motivation";
-import Modal from "../../shared/ui/modal/Modal";
-import useAppStore from "../../store/app-store";
-import "./styles.css";
+import { useState, useEffect } from 'react';
+import FunIcon from '../../shared/ui/icons/FunIcon';
+import NextIcon from '../../shared/ui/icons/NextIcon';
+import { dataMotivation } from './data-motivation';
+import Modal from '../../shared/ui/modal/Modal';
+import useAppStore from '../../store/app-store';
+import './styles.css';
 
 const MotivationModal = () => {
   const showModal = useAppStore((state) => state.showModal);
@@ -32,11 +32,7 @@ const MotivationModal = () => {
   if (!showModal) return null;
 
   return (
-    <Modal
-      isOpen={showModal}
-      onClose={closeModal}
-      icon={<FunIcon width="25" height="25" />}
-    >
+    <Modal isOpen={showModal} onClose={closeModal} icon={<FunIcon width="25" height="25" />}>
       <div>
         <blockquote
           className="quote-text"
@@ -44,17 +40,12 @@ const MotivationModal = () => {
             __html: dataMotivation[currentQuote].text,
           }}
         ></blockquote>
-        <cite className="quote-author">
-          — {dataMotivation[currentQuote].author}
-        </cite>
+        <cite className="quote-author">— {dataMotivation[currentQuote].author}</cite>
       </div>
       <div className="quote-footer">
         <div className="quote-dots">
           {dataMotivation.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === currentQuote ? "active" : ""}`}
-            />
+            <span key={index} className={`dot ${index === currentQuote ? 'active' : ''}`} />
           ))}
         </div>
 

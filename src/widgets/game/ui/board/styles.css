@@ -2,11 +2,3 @@
   display: flex;
   margin-right: auto;
 }
-
-@media (max-width: 767px) {
-  .game-field {
-    display: flex;
-    justify-content: center;
-    margin-right: 0;
-  }
-}

@@ -17,7 +17,7 @@
   display: inline-flex;
   width: 20;
   height: 20;
-  border: "none";
+  border: 'none';
   border-radius: 4;
   justify-content: center;
   align-items: center;

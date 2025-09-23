@@ -1,4 +1,4 @@
-import type { Task } from "@entities/task/model/taskStore";
+import type { Task } from '@entities/task/model/taskStore';
 
 type FetchBaseProps = {
   onSuccess: (data: Task[]) => void;
@@ -18,7 +18,7 @@ export const fetchBase = async ({
   try {
     const response = await fetch(`${API_URL}${url}`, {
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       ...options,
     });
@@ -36,7 +36,7 @@ export const fetchBase = async ({
     if (onError) {
       onError(error);
     } else {
-      console.error("Error in fetchBase:", error);
+      console.error('Error in fetchBase:', error);
     }
   }
 };

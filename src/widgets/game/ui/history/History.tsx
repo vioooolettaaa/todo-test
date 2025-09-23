@@ -1,6 +1,6 @@
-import RestartIcon from "@shared/ui/icons/RestartIcon";
-import "./styles.css";
-import type { JSX } from "react";
+import RestartIcon from '@shared/ui/icons/RestartIcon';
+import './styles.scss';
+import type { JSX } from 'react';
 
 type HistoryProps = {
   onClick: () => void;

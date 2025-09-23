@@ -1,0 +1,129 @@
+// История ходов — базовые стили и брейкпоинты в одной ветке
+.history-div {
+  // базовые стили (по умолчанию)
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  // мобильные и ниже md
+  @media (max-width: $breakpoint-md) {
+    width: 100%;
+    flex-direction: column;
+
+    .button-restart {
+      display: flex;
+      margin: 20px auto;
+      order: 0;
+    }
+
+    .history_title_moves {
+      display: flex;
+      flex-direction: column;
+      order: 2;
+
+      &::before {
+        top: 15px;
+        left: 0;
+        right: 0;
+        content: '';
+        display: block;
+        height: 0.5px;
+        background-color: rgb(210, 210, 210);
+        margin-top: 0;
+      }
+    }
+
+    .button-restart-text {
+      margin: 5px;
+    }
+  }
+  // планшеты от md до lg
+  @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
+    width: 100%;
+    flex-direction: column;
+
+    .button-restart {
+      display: flex;
+      margin: 20px auto;
+      order: 0;
+    }
+
+    .history_title_moves {
+      display: flex;
+
+      flex-direction: column;
+      order: 2;
+
+      &::before {
+        top: 15px;
+        left: 0;
+        right: 0;
+        content: '';
+        display: block;
+        height: 0.5px;
+        background-color: rgb(210, 210, 210);
+        margin-top: 0;
+      }
+
+      .restart-game:hover {
+        border-color: $primary-color;
+        background-color: transparent;
+      }
+    }
+  }
+
+  // большие экраны от lg и выше
+  @media (min-width: $breakpoint-lg) {
+    .history_title_moves {
+      .history-title {
+        margin-bottom: 20px;
+      }
+
+      .moves {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .button-restart {
+      display: flex;
+      margin-top: auto;
+
+      .restart-game {
+        display: flex;
+        align-items: center;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 0.5px;
+        transition: border-color 0.5s ease;
+
+        .button-restart-text {
+          margin: 5px;
+        }
+      }
+
+      .restart-game:hover {
+        border-color: $primary-color;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// Этот стиль должен быть в другом месте, вместе с селекторами
+.moves-button {
+  font-size: 16px;
+  padding: 0 5px 10px 0;
+  color: rgb(175, 171, 171);
+
+  &:not(:last-child)::after {
+    content: ' ⟶';
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  &:hover {
+    font-style: italic;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,7 @@
+@media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
+  .game-field {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+}

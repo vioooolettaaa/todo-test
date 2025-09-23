@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 export interface Task {
   _id: string;
@@ -9,7 +9,7 @@ export interface Task {
   archive: boolean;
   createdAt: string;
   updatedAt: string;
-  urgently: boolean
+  urgently: boolean;
 }
 
 interface TaskStore {

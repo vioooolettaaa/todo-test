@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 const useTaskStore = create((set) => ({
   tasks: [],
@@ -12,13 +12,10 @@ const useTaskStore = create((set) => ({
       return { tasks: newArray };
     }),
 
-  addToRedyTasks: (redyTask) =>
-    set((state) => ({ redyTasks: [...state.redyTasks, redyTask] })),
+  addToRedyTasks: (redyTask) => set((state) => ({ redyTasks: [...state.redyTasks, redyTask] })),
   deleteRedyItem: (taskId) =>
     set((state) => {
-      const newRedyArray = [...state.redyTasks].filter(
-        (task) => task.id != taskId
-      );
+      const newRedyArray = [...state.redyTasks].filter((task) => task.id != taskId);
       return { redyTasks: newRedyArray };
     }),
 }));

@@ -1,6 +1,6 @@
-import Game from "@widgets/game/ui/game/Game";
+import Game from '@widgets/game/ui/game/Game';
 
-import "./styles.css";
+import './styles.css';
 
 export default function GamePage() {
   return (

@@ -3,7 +3,7 @@ type FunIconProps = {
   height?: string;
 };
 
-export default function FunIcon({ height = "15", width = "15" }: FunIconProps) {
+export default function FunIcon({ height = '15', width = '15' }: FunIconProps) {
   return (
     <>
       <svg

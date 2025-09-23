@@ -1,14 +1,14 @@
-import "./styles.css";
-import React from "react";
+import './styles.css';
+import React from 'react';
 
 function UrgentlyInput() {
   return (
     <label
       style={{
-        display: "inline-flex",
-        alignItems: "center",
-        cursor: "pointer",
-        userSelect: "none",
+        display: 'inline-flex',
+        alignItems: 'center',
+        cursor: 'pointer',
+        userSelect: 'none',
       }}
     >
       <input type="checkbox" name="urgently" className="urgently-checkbox" />

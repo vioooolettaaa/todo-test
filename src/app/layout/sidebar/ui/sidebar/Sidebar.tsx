@@ -1,16 +1,16 @@
-import "./styles.css";
-import useAppStore from "@store/app-store";
-import { UserInfo } from "../user-info/UserInfo";
-import { NavigationList } from "@features/navigation/navigation-list/NavigationList";
-import { SidebarCloseButton } from "../sidebar-close-button/SidebarCloseButton";
-import useBreakpoints from "@shared/hooks/useBreakpoints";
+import useAppStore from '@store/app-store';
+import { UserInfo } from '../user-info/UserInfo';
+import { NavigationList } from '@features/navigation/navigation-list/NavigationList';
+import { SidebarCloseButton } from '../sidebar-close-button/SidebarCloseButton';
+import useBreakpoints from '@shared/hooks/useBreakpoints';
+import './styles.css';
 
 export function Sidebar() {
   const showSidebar = useAppStore((state) => state.showSidebar);
   const { isMobile } = useBreakpoints();
   return (
     <>
-      <div className={`main_nav_box  ${!showSidebar && "hidden_nav_box"} `}>
+      <div className={`main_nav_box  ${!showSidebar && 'hidden_nav_box'} `}>
         <div className="main_nav_inner ">
           <SidebarCloseButton />
           <UserInfo />

@@ -1,6 +1,6 @@
-import "./styles.css";
-import UrgentlyInput from "../UrgentlyInput/UrgentlyInput";
-import React from "react";
+import './styles.css';
+import UrgentlyInput from '../UrgentlyInput/UrgentlyInput';
+import React from 'react';
 
 type formTaskProps = {
   onCreate: (data: Record<string, any>) => void;
@@ -16,7 +16,7 @@ function FormTask({ onCreate, onCancel }: formTaskProps) {
 
     elements.forEach((item) => {
       if (item.name) {
-        if (item.type === "checkbox") {
+        if (item.type === 'checkbox') {
           dataForm[item.name] = item.checked;
         } else {
           dataForm[item.name] = item.value;

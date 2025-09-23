@@ -1,7 +1,8 @@
-import { Grid } from "../grid/Grid";
-import { useEffect } from "react";
-import "./styles.css";
-import type { Squares } from "../square/Square";
+import { Grid } from '../grid/Grid';
+import { useEffect } from 'react';
+import './styles.css';
+import type { Squares } from '../square/Square';
+import './styles.scss';
 
 type BoardProps = {
   xIsNext: boolean;
@@ -11,18 +12,12 @@ type BoardProps = {
   onStatusChange: (value: string) => void;
 };
 
-export function Board({
-  xIsNext,
-  squares,
-  onPlay,
-  onGameOver,
-  onStatusChange,
-}: BoardProps) {
+export function Board({ xIsNext, squares, onPlay, onGameOver, onStatusChange }: BoardProps) {
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) return;
     const nextSquares = squares.slice();
 
-    nextSquares[i] = xIsNext ? "X" : "Жук";
+    nextSquares[i] = xIsNext ? 'X' : 'Жук';
 
     onPlay(nextSquares);
   }
@@ -42,11 +37,7 @@ export function Board({
       const line = lines[i];
       if (!line) continue;
       const [a, b, c] = line as [number, number, number];
-      if (
-        squares[a] &&
-        squares[a] === squares[b] &&
-        squares[a] === squares[c]
-      ) {
+      if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
         return squares[a];
       }
     }
@@ -55,9 +46,7 @@ export function Board({
 
   useEffect(() => {
     const winner = calculateWinner(squares);
-    let status = winner
-      ? "Победитель: " + winner
-      : "Следующий ход: " + (xIsNext ? "X" : "Жук");
+    let status = winner ? 'Победитель: ' + winner : 'Следующий ход: ' + (xIsNext ? 'X' : 'Жук');
 
     onStatusChange(status);
 

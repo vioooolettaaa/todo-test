@@ -1,6 +1,6 @@
-import AddIcon from "@shared/ui/icons/AddIcon";
-import useAppStore from "@store/app-store";
-import "./styles.css";
+import AddIcon from '@shared/ui/icons/AddIcon';
+import useAppStore from '@store/app-store';
+import './styles.css';
 
 type openFormTaskProps = {
   onClick: () => void;

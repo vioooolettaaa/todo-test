@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 const useAppStore = create((set) => ({
   showForm: false,
@@ -24,7 +24,7 @@ const useAppStore = create((set) => ({
   openModalGame: () => set({ showModalGame: true }),
   closeModalGame: () => set({ showModalGame: false }),
 
-  page: "main",
+  page: 'main',
   setPage: (page) => set({ page: page }),
 }));
 

@@ -1,7 +1,7 @@
-import ReactDOM from "react-dom";
-import "./styles.css";
-import DeleteIcon from "../icons/DeleteIcon";
-import type React from "react";
+import ReactDOM from 'react-dom';
+import './styles.css';
+import DeleteIcon from '../icons/DeleteIcon';
+import type React from 'react';
 
 type ModalProps = {
   isOpen: boolean;
@@ -11,13 +11,7 @@ type ModalProps = {
   contentClassname?: string;
 };
 
-function Modal({
-  isOpen,
-  onClose,
-  children,
-  icon,
-  contentClassname,
-}: ModalProps) {
+function Modal({ isOpen, onClose, children, icon, contentClassname }: ModalProps) {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(

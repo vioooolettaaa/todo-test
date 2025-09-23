@@ -1,5 +1,5 @@
-import { fetchBase } from "@shared/api/apiBase";
-import type { Task } from "../model/taskStore";
+import { fetchBase } from '@shared/api/apiBase';
+import type { Task } from '../model/taskStore';
 
 type FetchProps = {
   onSuccess: (data: Task[]) => void;
@@ -28,17 +28,13 @@ export const fetchReadyTasks = ({ onSuccess, onError }: FetchProps) =>
     onError,
   });
 
-export const fetchDeleteTasks = ({
-  onSuccess,
-  onError,
-  taskId,
-}: FetchDeleteProps) =>
+export const fetchDeleteTasks = ({ onSuccess, onError, taskId }: FetchDeleteProps) =>
   fetchBase({
     url: `/task/delete`,
     onSuccess,
     onError,
     options: {
-      method: "DELETE",
+      method: 'DELETE',
       body: JSON.stringify({ id: taskId }),
     },
   });
@@ -49,7 +45,7 @@ export const fetchAddTasks = ({ onSuccess, onError, item }: FetchAddProps) =>
     onSuccess,
     onError,
     options: {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify(item),
     },
   });

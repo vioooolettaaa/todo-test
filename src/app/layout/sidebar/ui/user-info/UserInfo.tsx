@@ -1,4 +1,4 @@
-import "./styles.css";
+import './styles.css';
 
 export function UserInfo() {
   return (
@@ -10,7 +10,7 @@ export function UserInfo() {
           alt="photo"
           width={60}
           height={60}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <p className="user-name">Виолетта</p>

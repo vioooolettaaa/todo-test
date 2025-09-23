@@ -1,4 +1,4 @@
-import "./styles.css";
+import './styles.css';
 
 type InfoPanelProps = {
   status: string | null;

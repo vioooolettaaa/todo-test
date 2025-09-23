@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
-import "./styles.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from 'react';
+import './styles.css';
+import './app.scss';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import AppLayout from "./layout/AppLayout";
-import { TasksPage } from "@pages/task-page/TasksPage";
-import GamePage from "../pages/game-page/ui/GamePage";
+import AppLayout from './layout/AppLayout';
+import { TasksPage } from '@pages/task-page/TasksPage';
+import GamePage from '../pages/game-page/ui/GamePage';
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
           <Route
             path="*"
             element={
-              <div style={{ padding: "20px", textAlign: "center" }}>
+              <div style={{ padding: '20px', textAlign: 'center' }}>
                 <h2>404 - Страница не найдена</h2>
               </div>
             }

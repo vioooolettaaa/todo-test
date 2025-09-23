@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import Modal from "@shared/ui/modal/Modal";
-import ButterfluIcon from "@shared/ui/icons/ButterfluIcon";
-import useAppStore from "@store/app-store";
+import { useEffect, useState } from 'react';
+import Modal from '@shared/ui/modal/Modal';
+import ButterfluIcon from '@shared/ui/icons/ButterfluIcon';
+import useAppStore from '@store/app-store';
 
 export default function TaskGreatingModal({ redyTasks }) {
   const showModalTemplate = useAppStore((state) => state.showModalTemplate);
