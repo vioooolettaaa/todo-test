@@ -1,5 +1,5 @@
 import type { Task } from '@entities/task/model/taskStore';
-import './styles.css';
+import './styles.scss';
 import { TaskItem } from '@entities/task/ui/TaskItem';
 
 type TodoListProps = {

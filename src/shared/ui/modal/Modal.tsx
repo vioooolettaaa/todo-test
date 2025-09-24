@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import './styles.css';
 import DeleteIcon from '../icons/DeleteIcon';
 import type React from 'react';
+import useBreakpoints from '@shared/hooks/useBreakpoints';
 
 type ModalProps = {
   isOpen: boolean;
@@ -12,6 +13,7 @@ type ModalProps = {
 };
 
 function Modal({ isOpen, onClose, children, icon, contentClassname }: ModalProps) {
+  const { isMobile } = useBreakpoints();
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
@@ -20,9 +22,11 @@ function Modal({ isOpen, onClose, children, icon, contentClassname }: ModalProps
         className={`modal-content quote-modal ${contentClassname}`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="modal-close" onClick={onClose}>
-          <DeleteIcon />
-        </button>
+        {!isMobile && (
+          <button className="modal-close" onClick={onClose}>
+            <DeleteIcon />
+          </button>
+        )}
 
         <div className="quote-container">
           {icon && <div className="quote-icon">{icon}</div>}

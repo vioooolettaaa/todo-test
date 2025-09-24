@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles.scss';
 import MotivationModal from '@widgets/motivation-modal/MotivationModal';
 import { Sidebar } from './sidebar/ui/sidebar/Sidebar';
 import useAppStore from '@store/app-store';
@@ -10,12 +10,11 @@ type AppLayoutProps = {
 
 function AppLayout({ children }: AppLayoutProps) {
   const showSidebar = useAppStore((state) => state.showSidebar);
-  const { isMobile } = useBreakpoints();
 
   return (
     <div className="main-flex">
       <Sidebar />
-      <div className={`main-content ${showSidebar && !isMobile && 'padding_left'}`}>
+      <div className={`main-content ${showSidebar && 'padding_left'}`}>
         {children}
         <MotivationModal />
       </div>

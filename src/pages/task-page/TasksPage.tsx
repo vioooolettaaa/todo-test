@@ -10,7 +10,8 @@ import { fetchNotReadyTasks } from '@entities/task/api/task-api';
 import { fetchReadyTasks } from '@entities/task/api/task-api';
 import { fetchDeleteTasks } from '@entities/task/api/task-api';
 import { fetchAddTasks } from '@entities/task/api/task-api';
-import './styles.css';
+import './styles.scss';
+import useBreakpoints from '@shared/hooks/useBreakpoints';
 
 export function TasksPage() {
   const newTasks = useTaskStore((state) => state.tasks);
@@ -23,6 +24,8 @@ export function TasksPage() {
   const setTasks = useTaskStore((state) => state.setTasks);
   const setReadyTasks = useTaskStore((state) => state.setReadyTasks);
   const [error, setError] = useState();
+
+  const { isMobile } = useBreakpoints();
 
   const getNotReadyTasks = () =>
     fetchNotReadyTasks({
@@ -86,19 +89,28 @@ export function TasksPage() {
   return (
     <>
       <div className="main-content-flex">
-        <div className="main-header">
-          <button className="modal-motovation-button" onClick={toogleModal}>
-            <FunIcon />
-          </button>
-        </div>
+        {!isMobile && (
+          <div className="main-header">
+            <button className="modal-motovation-button" onClick={toogleModal}>
+              <FunIcon />
+            </button>
+          </div>
+        )}
 
         <div className="main-content-align">
-          <h1 className="main-title">
-            Задачи
-            <span className="count-tasks">
-              &nbsp;{redyTasks.length}/{newTasks.length}
-            </span>
-          </h1>
+          <div className="header-title-box">
+            <h1 className="main-title">
+              Задачи
+              <span className="count-tasks">
+                &nbsp;{redyTasks.length}/{newTasks.length}
+              </span>
+            </h1>
+            {isMobile && (
+              <button className="modal-motovation-button" onClick={toogleModal}>
+                <FunIcon />
+              </button>
+            )}
+          </div>
           <TodoList tasks={newTasks} onDelete={deleteTask} onRedy={toRedyTask} />
 
           {!showForm && <OpenFormTask onClick={openForm} />}

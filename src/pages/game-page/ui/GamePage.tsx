@@ -1,6 +1,5 @@
 import Game from '@widgets/game/ui/game/Game';
-
-import './styles.css';
+import './styles.scss';
 
 export default function GamePage() {
   return (

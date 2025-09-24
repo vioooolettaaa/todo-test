@@ -1,0 +1,20 @@
+.padding_left {
+  padding-left: 260px;
+}
+
+@media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
+  .main-content {
+    padding-left: 80px;
+  }
+
+  .main-content.padding_left {
+    padding-left: 260px;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .main-content {
+    margin: 30px auto;
+    padding: 30px;
+  }
+}

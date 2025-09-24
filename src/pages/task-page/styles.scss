@@ -1,0 +1,126 @@
+.main-content-flex {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 100%;
+  padding: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+  transition: 0.3s ease-in-out;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 15px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(135, 134, 134);
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(145, 94, 94);
+  }
+
+  .main-content-align {
+    max-width: 700px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .header-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+  }
+
+  .main-title {
+    margin: 0;
+    .count-tasks {
+      font-size: 16px;
+      color: rgb(135, 134, 134);
+      font-style: italic;
+      font-weight: 100;
+      letter-spacing: 2px;
+    }
+  }
+
+  .main-title-redy {
+    color: rgb(135, 134, 134);
+    border-top: 0.5px solid rgb(135, 134, 134);
+    padding-top: 10px;
+    margin-top: 100px;
+  }
+
+  .form-wrapper {
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+
+    &.open-show {
+      height: 242px;
+    }
+
+    &.close-show {
+      height: 0px;
+    }
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    padding-right: 3%;
+  }
+
+  .modal-motovation-button {
+    transition: transform 0.3s ease-out;
+
+    &:hover {
+      background-color: transparent;
+      transform: scale(1.5);
+
+      path {
+        fill: rgb(145, 94, 94);
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    transition: 0.3s ease-in-out;
+
+    .main-content-align {
+      max-width: 100%;
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+
+      .header-title-box {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+        padding-bottom: 15px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

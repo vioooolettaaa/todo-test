@@ -1,6 +1,8 @@
-import './styles.css';
+import './styles.scss';
 import UrgentlyInput from '../UrgentlyInput/UrgentlyInput';
 import React from 'react';
+import useBreakpoints from '@shared/hooks/useBreakpoints';
+import AddIcon from '@shared/ui/icons/AddIcon';
 
 type formTaskProps = {
   onCreate: (data: Record<string, any>) => void;
@@ -8,6 +10,8 @@ type formTaskProps = {
 };
 
 function FormTask({ onCreate, onCancel }: formTaskProps) {
+  const { isMobile } = useBreakpoints();
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const dataForm: Record<string, any> = {};
@@ -55,7 +59,7 @@ function FormTask({ onCreate, onCancel }: formTaskProps) {
             Отмена
           </button>
           <button className="add-button-form" type="submit">
-            Добавить задачу
+            {isMobile ? <AddIcon /> : 'Добавить задачу'}
           </button>
         </div>
       </form>
